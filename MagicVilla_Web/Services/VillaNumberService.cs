@@ -34,7 +34,7 @@ namespace MagicVilla_Web.Services
             return SendAsync<T>(new APIRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = villaUrl + "/api/villanumber" + id,
+                Url = villaUrl + "/api/villanumber/" + id,
                 Token = token
             });
         }
@@ -65,7 +65,7 @@ namespace MagicVilla_Web.Services
             {
                 ApiType = SD.ApiType.PUT,
                 Data = dto,
-                Url = villaUrl + "/api/villanumbers" + dto.VillaNo,
+                Url = villaUrl + "/api/villanumber/" + dto.VillaNo,
                 Token = token
             }) ;
         }
